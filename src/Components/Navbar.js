@@ -1,11 +1,14 @@
 import React from "react";
+import logo from "../Images/logo.png"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
-      <header class="shadow mb-2">
+      <header class="shadow bg-[#422006]">
         <div class="relative flex max-w-screen-xl flex-col overflow-hidden px-4 py-4 md:mx-auto md:flex-row md:items-center">
-          <a
+        <img src={logo} alt="Mapwala" className="h-16"/>
+          {/* <a
             href="#"
             class="flex items-center whitespace-nowrap text-2xl font-black"
           >
@@ -27,8 +30,8 @@ const Navbar = () => {
             </span>
             <span class="text-black">Skytrack</span>
           </a>
-          <input type="checkbox" class="peer hidden" id="navbar-open" />
-          <label
+          <input type="checkbox" class="peer hidden" id="navbar-open" /> */}
+          {/* <label
             class="absolute top-5 right-7 cursor-pointer md:hidden"
             for="navbar-open"
           >
@@ -47,20 +50,20 @@ const Navbar = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </label>
+          </label> */}
           <nav
             aria-label="Header Navigation"
             class="peer-checked:mt-8 peer-checked:max-h-56 flex max-h-0 w-full flex-col items-center justify-between overflow-hidden transition-all md:ml-24 md:max-h-full md:flex-row md:items-start"
           >
-            <ul class="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0">
-              <li class="text-gray-600 md:mr-12 hover:text-blue-600">
-                <a href="#">Option 1</a>
+            <ul class="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0 ">
+              <li class="text-white md:mr-12 hover:text-green-600">
+                <Link to="/">Home</Link>
               </li>
-              <li class="text-gray-600 md:mr-12 hover:text-blue-600">
-                <a href="#">Option 2</a>
+              <li class="text-white md:mr-12 hover:text-green-600">
+                <Link to="/about">About</Link>
               </li>
-              <li class="text-gray-600 md:mr-12 hover:text-blue-600">
-                <a href="#">Option 3</a>
+              <li class="text-white md:mr-12 hover:text-green-600">
+                <Link to="/contact">Contact</Link>
               </li>
               {/* <li class="text-gray-600 md:mr-12 hover:text-blue-600">
                 <button class="rounded-md border-2 border-blue-600 px-6 py-1 font-medium text-blue-600 transition-colors hover:bg-blue-600 hover:text-white">

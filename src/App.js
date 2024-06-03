@@ -1,6 +1,7 @@
-import Navbar from "./Components/Navbar";
-import Slider from "./Components/Slider";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
 
 function App() {
 
@@ -9,10 +10,16 @@ function App() {
   
   return (
     <div >
-      <Navbar/>
-      <Login/>
+     
+       
 
-      {/* <Slider/> */}
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login/> } />
+        <Route path="/about" element={<About/> } />
+        <Route path="/contact" element={<Contact/> } />
+      </Routes>
+    </BrowserRouter>
 
     
   

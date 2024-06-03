@@ -1,24 +1,29 @@
 import React from "react";
 import Slider from "../Components/Slider";
-import image3a from "./image3a.jpg"
-import image2 from "./image2.jpg"
-import image1 from "./image1.jpg"
+import image3a from "../Images/image3a.jpg";
+import image2 from "../Images/image2.jpg";
+import image1 from "../Images/image1.jpg";
+import home1 from "../Images/home1.jpg";
+import home2 from "../Images/home2.jpg";
+import Navbar from "../Components/Navbar";
+
 const Login = () => {
   const images = [
     {
-      imgURL:
-        image3a,
-      imgAlt: "img-3"
+      imgURL: home1,
+      imgAlt: "img-1",
     },
     {
-      imgURL:
-      image2,
-      imgAlt: "img-2"
+      imgURL: home2,
+      imgAlt: "img-2",
     },
     {
-      imgURL:
-        image1,
-      imgAlt: "img-1"
+      imgURL: image2,
+      imgAlt: "img-3",
+    },
+    {
+      imgURL: image1,
+      imgAlt: "img-4",
     },
     // {
     //   imgURL:
@@ -37,19 +42,19 @@ const Login = () => {
     // }
   ];
   return (
-    <div>
-      
+    <div className="">
+      <Navbar/>
       <div class="flex  flex-wrap">
-      <div class=" md:block md:w-1/2 lg:w-9/12">
+        <div class=" md:block md:w-1/2 lg:w-9/12">
           {/* <img
             class="h-screen w-full object-cover opacity-90"
             src="https://djwaiia8q94ix.cloudfront.net/04.140.00/images/logo/trakzee/image4.jpg"
           /> */}
-            <Slider>
-        {images.map((image, index) => {
-          return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
-        })}
-      </Slider>
+          <Slider>
+            {images.map((image, index) => {
+              return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
+            })}
+          </Slider>
         </div>
         <div class="flex flex-col md:w-1/2 lg:w-3/12">
           {/* <div class="flex justify-center pt-12 md:-mb-24 md:justify-start md:pl-12">
@@ -125,7 +130,6 @@ const Login = () => {
             </div> */}
           </div>
         </div>
-    
       </div>
     </div>
   );
